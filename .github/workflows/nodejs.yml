@@ -15,7 +15,7 @@ jobs:
       - name: docker build Dockerfile
         run: |
           echo "---BUILD IMAGE DOCKER---"
-          ./scripts/build.sh
+          ./build.sh
 # Login to DockerHub
       - uses: docker/login-action@v1
         with:
