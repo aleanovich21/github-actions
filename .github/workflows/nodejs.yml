@@ -14,7 +14,7 @@ jobs:
       - name: docker build Dockerfile
         run: |
           env
-          docker build -t delaxei/nodejs-application:1.0 -f Dockerfile .
+#          docker build -t delaxei/nodejs-application:1.0 -f Dockerfile .
 
       - name: docker push
         run: |
