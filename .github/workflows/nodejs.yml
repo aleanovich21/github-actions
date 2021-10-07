@@ -25,10 +25,10 @@ jobs:
       - name: docker push
         run: |
           echo "---PUSH IMAGE TO DOCKERHUB---"
-          docker push delaxei/nodejs-application
+          ./push.sh
 # Pull and deploy image
       - name: docker pull and deploy
         run: |
           echo "---PULL IMAGE FROM DOCKERHUB---"
-          docker pull delaxei/nodejs-application
+          ./pull.sh
           docker run -p 8080:8080 -d delaxei/nodejs-application
