@@ -28,8 +28,8 @@ jobs:
           docker push delaxei/nodejs-application:1.0
 # Pull and deploy image
       - name: docker pull and deploy
-        run: |
 # Pull image
+        run: |
           echo "---PULL IMAGE FROM DOCKERHUB---"
           docker pull delaxei/nodejs-application:1.0
 # Deploy image
