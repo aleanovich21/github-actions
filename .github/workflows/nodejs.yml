@@ -13,8 +13,8 @@ jobs:
       - uses: actions/checkout@v2
       - name: docker build Dockerfile
         run: |
-          docker build -t my-nodejs-application -f Dockerfile .
+          docker build -t delaxei/nodejs-application -f Dockerfile .
 
       - name: docker push
         run: |
-          docker push my-nodejs-application
+          docker push delaxei/nodejs-application
