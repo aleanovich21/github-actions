@@ -13,10 +13,9 @@ jobs:
       - uses: actions/checkout@v2
       - name: docker build Dockerfile
         run: |
+          env
           docker build -t delaxei/nodejs-application:1.0 -f Dockerfile .
 
       - name: docker push
         run: |
-          docker login delaxei
-          docker password 11180784Dl
           docker push delaxei/nodejs-application:1.0
