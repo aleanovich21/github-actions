@@ -24,7 +24,7 @@ jobs:
         run: |
           docker push delaxei/nodejs-application:1.0
 
-      - uses: actions/checkout@v2
-      - name: docker pull delaxei/nodejs-application:1.0
+      - name: docker pull and deploy
         run: |
+          docker pull delaxei/nodejs-application:1.0
           docker run -p 8080:8080 -d delaxei/nodejs-application:1.0
