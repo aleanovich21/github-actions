@@ -16,7 +16,6 @@ jobs:
           docker build -t delaxei/nodejs-application:1.0 -f Dockerfile .
 
   push:
-    runs-on: ubuntu-latest
     needs: build
     environment: secrets
 
