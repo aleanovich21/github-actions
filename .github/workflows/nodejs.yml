@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  build:
+  main:
     runs-on: ubuntu-latest
     environment: secrets
 
@@ -23,3 +23,8 @@ jobs:
       - name: docker push
         run: |
           docker push delaxei/nodejs-application:1.0
+
+      - uses: actions/checkout@v2
+      - name: docker pull delaxei/nodejs-application:1.0
+        run: |
+        docker run -p 8080:8080 -d delaxei/nodejs-application:1.0
