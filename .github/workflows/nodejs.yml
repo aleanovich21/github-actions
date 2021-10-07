@@ -17,8 +17,8 @@ jobs:
           password: ${{secrets.DOCKER_PASSWORD}}
       - name: docker build Dockerfile
         run: |
-#          docker build -t delaxei/nodejs-application:1.0 -f Dockerfile .
+          docker build -t delaxei/nodejs-application:1.0 -f Dockerfile .
 
       - name: docker push
         run: |
-#          docker push delaxei/nodejs-application:1.0
+          docker push delaxei/nodejs-application:1.0
