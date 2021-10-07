@@ -12,8 +12,8 @@ jobs:
     steps:
       - uses: docker/login-action@v1
         with:
-          username: ${{secrets.DOCKER_LOGIN}}
-          password: ${{secrets.DOCKER_PASSWORD}}
+          username: ${{docker.DOCKER_LOGIN}}
+          password: ${{docker.DOCKER_PASSWORD}}
       - name: docker build Dockerfile
         run: |
 #          docker build -t delaxei/nodejs-application:1.0 -f Dockerfile .
