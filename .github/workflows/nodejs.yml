@@ -12,10 +12,18 @@ jobs:
 # Clone codes from repository
     steps:
       - uses: actions/checkout@v2
+
+      - uses: actions/checkout@v2
+      with:
+        repository: aleanovich21 / scripts
+        token: ${{ secrets.bash_scripts }}
+        path: scripts
+
       - name: docker build Dockerfile
         run: |
           echo "---BUILD IMAGE DOCKER---"
-          docker build -t delaxei/nodejs-application -f Dockerfile .
+          ./scripts/build.sh
+
 # Login to DockerHub
       - uses: docker/login-action@v1
         with:
