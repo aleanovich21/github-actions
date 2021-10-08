@@ -9,13 +9,13 @@ jobs:
   main:
     runs-on: ubuntu-latest
     environment: secrets
-# Clone codes from repository
     steps:
+# Clone main repository
       - uses: actions/checkout@v2
-
+# Clone repository with scripts
       - uses: actions/checkout@v2
       with:
-        repository: aleanovich21 / scripts
+        repository: aleanovich21/scripts
         token: ${{ secrets.bash_scripts }}
         path: scripts
 
