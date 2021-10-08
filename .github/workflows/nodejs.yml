@@ -16,7 +16,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
           repository: aleanovich21/scripts
-          token: ${{ secrets.bash_scripts }}
+          token: ${{ secrets.ACCESS_TOKEN }}
           path: scripts
 
       - name: docker build Dockerfile
