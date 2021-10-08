@@ -14,10 +14,10 @@ jobs:
       - uses: actions/checkout@v2
 # Clone repository with scripts 
       - uses: actions/checkout@v2
-      with:
-        repository: aleanovich21/scripts
-        token: ${{ secrets.bash_scripts }}
-        path: scripts
+        with:
+          repository: aleanovich21/scripts
+          token: ${{ secrets.bash_scripts }}
+          path: scripts
 
       - name: docker build Dockerfile
         run: |
