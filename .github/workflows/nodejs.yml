@@ -12,7 +12,7 @@ jobs:
     steps:
 # Clone main repository
       - uses: actions/checkout@v2
-# Clone repository with scripts 
+# Clone repository with scripts
       - uses: actions/checkout@v2
         with:
           repository: aleanovich21/scripts
