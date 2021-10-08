@@ -18,12 +18,11 @@ jobs:
           repository: aleanovich21/scripts
           token: ${{ secrets.ACCESS_TOKEN }}
           path: scripts
-
+#Build docker image
       - name: docker build Dockerfile
         run: |
           echo "---BUILD IMAGE DOCKER---"
           ./scripts/build.sh
-
 # Login to DockerHub
       - uses: docker/login-action@v1
         with:
@@ -33,10 +32,10 @@ jobs:
       - name: docker push
         run: |
           echo "---PUSH IMAGE TO DOCKERHUB---"
-          docker push delaxei/nodejs-application
+          ./scripts/push.sh
 # Pull and deploy image
       - name: docker pull and deploy
         run: |
           echo "---PULL IMAGE FROM DOCKERHUB---"
-          docker pull delaxei/nodejs-application
-          docker run -p 8080:8080 -d delaxei/nodejs-application
+          ./scripts/pull.sh
+          ./scripts/run.sh
