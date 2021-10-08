@@ -4,4 +4,4 @@ set -euo pipefail
 
 source ./functions.sh
 
-pars_docker_repo
+pipeline_docker_repo
