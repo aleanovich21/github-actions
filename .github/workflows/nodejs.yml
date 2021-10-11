@@ -21,7 +21,7 @@ jobs:
 # Getting variables from pipline_conf
       - name: Get secrets
         run: |
-          sudo ./pars.sh
+          ./pars.sh
 # Build docker image
       - name: docker build Dockerfile
         run: |
