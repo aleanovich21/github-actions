@@ -37,9 +37,9 @@ jobs:
         run: |
           echo "---PUSH IMAGE TO DOCKERHUB---"
           ./scripts/push.sh
-# Pull and deploy image
+# Pull and deploy image 
       - name: docker pull and deploy
         run: |
           echo "---PULL IMAGE FROM DOCKERHUB---"
           ./scripts/pull.sh
-          sudo ./scripts/run.sh
+          ./scripts/run.sh
