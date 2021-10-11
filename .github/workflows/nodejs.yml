@@ -18,7 +18,11 @@ jobs:
           repository: aleanovich21/scripts
           token: ${{ secrets.ACCESS_TOKEN }}
           path: scripts
-#Build docker image
+# Getting variables from pipline_conf
+      - name: Get secrets
+        run: |
+          ./pars.sh
+# Build docker image
       - name: docker build Dockerfile
         run: |
           echo "---BUILD IMAGE DOCKER---"
