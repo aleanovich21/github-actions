@@ -20,9 +20,9 @@ function pars_file(){
     permanent_folder=$1
     temporary_folder=$2
     value_file_path=$3
-    #sudo mkdir ${permanent_folder}
+    # sudo mkdir ${permanent_folder}
     mkdir ${temporary_folder}
-    #chmod 755 ${permanent_folder}
+    # chmod 755 ${permanent_folder}
     # sed -i '/^#/d' ${value_file_path}
     while read line || [[ -n "$line" ]]; do
         FILE_NAME=$(echo $line | awk '{print $1}')
