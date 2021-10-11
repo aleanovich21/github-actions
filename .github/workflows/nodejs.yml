@@ -42,4 +42,4 @@ jobs:
         run: |
           echo "---PULL IMAGE FROM DOCKERHUB---"
           ./scripts/pull.sh
-          ./scripts/run.sh
+          sudo ./scripts/run.sh
