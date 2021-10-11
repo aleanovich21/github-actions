@@ -26,6 +26,8 @@ function pars_file(){
     while read line || [[ -n "$line" ]]; do
         FILE_NAME=$(echo $line | awk '{print $1}')
         echo $line | awk '{print $3}' > ${temporary_folder}$FILE_NAME.txt
+        pwd
+        ls -la ./secrets/
     done < ${value_file_path}
     sudo mv ${temporary_folder}* ${permanent_folder}
     #rmdir ${temporary_folder}
