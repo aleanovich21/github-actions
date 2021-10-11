@@ -20,15 +20,14 @@ function pars_file(){
     permanent_folder=$1
     temporary_folder=$2
     value_file_path=$3
-    sudo mkdir ${permanent_folder}
+    #sudo mkdir ${permanent_folder}
     mkdir ${temporary_folder}
-    sed -i '/^#/d' ${value_file_path}
+    #chmod 755 ${permanent_folder}
+    # sed -i '/^#/d' ${value_file_path}
     while read line || [[ -n "$line" ]]; do
         FILE_NAME=$(echo $line | awk '{print $1}')
         echo $line | awk '{print $3}' > ${temporary_folder}$FILE_NAME.txt
-        pwd
-        ls -la ./secrets/
     done < ${value_file_path}
-    sudo mv ${temporary_folder}* ${permanent_folder}
-    #rmdir ${temporary_folder}
+    # sudo mv ${temporary_folder}* ${permanent_folder}
+    # rmdir ${temporary_folder}
 }
