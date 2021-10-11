@@ -21,7 +21,7 @@ function pars_file(){
     temporary_folder=$2
     value_file_path=$3
     sudo mkdir ${permanent_folder}
-    mkdir ${temporary_folder}
+    sudo mkdir ${temporary_folder}
     sed -i '/^#/d' ${value_file_path}
     while read line || [[ -n "$line" ]]; do
         FILE_NAME=$(echo $line | awk '{print $1}')
