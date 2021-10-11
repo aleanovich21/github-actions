@@ -28,5 +28,5 @@ function pars_file(){
         echo $line | awk '{print $3}' > ${temporary_folder}$FILE_NAME.txt
     done < ${value_file_path}
     sudo mv ${temporary_folder}* ${permanent_folder}
-    rmdir ${temporary_folder}
+    #rmdir ${temporary_folder}
 }
