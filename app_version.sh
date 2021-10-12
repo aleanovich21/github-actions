@@ -14,5 +14,5 @@ echo ${hash_commit}
 
 echo "---PROJECT VERSION---"
 app_version $branch_name $hash_commit
-sudo mkdir /version
-sudo mv ./PROJECT_VERSION.txt /version/
+#sudo mkdir /version
+#sudo mv ./PROJECT_VERSION.txt /version/

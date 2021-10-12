@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-git describe --tags $(git rev-list --tags --max-count=1) | sed -e 's/^v//' > PROJECT_VERSION.txt
+git describe --tags $(git rev-list --tags --max-count=1) | sed -e 's/^v//' > PROJECT_TAG.txt
 
-sudo mkdir /version
-sudo mv ./PROJECT_VERSION.txt /version
+#sudo mkdir /version
+#sudo mv ./PROJECT_VERSION.txt /version

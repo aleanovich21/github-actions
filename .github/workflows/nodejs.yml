@@ -21,8 +21,12 @@ jobs:
 # Getting variables from pipline_conf
       - name: Get secrets
         run: |
-          env
           ./pars.sh
+# Getting version and tag for image name
+      - name: Get version and tag
+        run: |
+          ./app_version.sh
+          ./tag_version.sh
 # Build docker image
       - name: docker build Dockerfile
         run: |
