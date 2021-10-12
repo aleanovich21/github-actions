@@ -25,8 +25,9 @@ jobs:
 # Getting version and tag for image name
       - name: Get version and tag
         run: |
-          sudo ./app_version.sh
-          sudo ./tag_version.sh
+          chmod 755 app_version.sh tag_version.sh
+          ./app_version.sh
+          ./tag_version.sh
 # Build docker image
       - name: docker build Dockerfile
         run: |
