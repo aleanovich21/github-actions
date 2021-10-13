@@ -25,11 +25,8 @@ jobs:
 # Getting version and tag for image name
       - name: Get version and tag
         run: |
-          git log
-          chmod 755 app_version.sh tag_version.sh
+          chmod 755 app_version.sh
           ./app_version.sh
-          ./tag_version.sh
-          ls -la
 # Build docker image
       - name: docker build Dockerfile
         run: |
