@@ -30,7 +30,7 @@ jobs:
         run: |
           chmod 755 app_version.sh tag_version.sh
       - name: Application version
-        if: ${{ github.push = 'push'}}
+        if: ${{ github.event_name == 'push' }}
         run: |
           ./app_version.sh
       - name: Tag version
