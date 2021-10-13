@@ -30,11 +30,11 @@ jobs:
         run: |
           chmod 755 app_version.sh tag_version.sh
       - name: Application version
-        if: ${{ github.event.push.branches }}
+        if: ${{ github.event_name = 'push'}}
         run: |
           ./app_version.sh
       - name: Tag version
-        if: ${{ github.event.create.tags }}
+        if: ${{ github.event_name == 'create' && github.event.ref_type == 'tag' }}
         run: |
           ./tag_version.sh
 # Build docker image
