@@ -25,10 +25,6 @@ jobs:
       - name: Get secrets
         run: |
           ./pars.sh
-# Getting version and tag for image name
-      # - name: Get version and tag
-      #   run: |
-      #     chmod 755 app_version.sh tag_version.sh
 # Creating hash and branch version name if we did push to main branch
       - name: Application version
         if: ${{ github.event_name == 'push' }}
