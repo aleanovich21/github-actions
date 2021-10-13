@@ -29,9 +29,14 @@ jobs:
       - name: Get version and tag
         run: |
           chmod 755 app_version.sh tag_version.sh
+      - name: Application version
+        if: ${{ github.event.issue.main}}
+        run: |
           ./app_version.sh
+      - name: Tag version
+        if: ${{ github.event.issue.tag}}
+        run: |
           ./tag_version.sh
-          cat PROJECT_TAG.txt
 # Build docker image
       - name: docker build Dockerfile
         run: |
