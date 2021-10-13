@@ -26,6 +26,7 @@ jobs:
       - name: Get version and tag
         run: |
           chmod 755 app_version.sh tag_version.sh
+          git tag
           ./app_version.sh
           ./tag_version.sh
           ls -la
