@@ -11,6 +11,6 @@ hash_commit=$(git rev-parse --short HEAD)
 echo ${hash_commit}
 
 echo "---PROJECT VERSION---"
-PROJECT_VERSION=${hash_commit}
+PROJECT_VERSION=${branch_name}-${hash_commit}
 echo ${PROJECT_VERSION}
 echo ${PROJECT_VERSION} > PROJECT_VERSION.txt
