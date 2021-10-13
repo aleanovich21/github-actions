@@ -25,7 +25,7 @@ jobs:
 # Getting version and tag for image name
       - name: Get version and tag
         run: |
-          git tag
+          git log
           chmod 755 app_version.sh tag_version.sh
           ./app_version.sh
           ./tag_version.sh
