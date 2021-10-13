@@ -26,7 +26,6 @@ jobs:
       - name: Get version and tag
         run: |
           chmod 755 app_version.sh tag_version.sh
-          git describe --tags $(git rev-list --tags --max-count=1)
           ./app_version.sh
           ./tag_version.sh
           ls -la
