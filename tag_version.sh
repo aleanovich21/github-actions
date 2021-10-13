@@ -6,3 +6,4 @@ git describe --tags $(git rev-list --tags --max-count=1) | sed -e 's/^v//' > PRO
 
 #sudo mkdir /version
 #sudo mv ./PROJECT_VERSION.txt /version
+cat PROJECT_TAG.txt
