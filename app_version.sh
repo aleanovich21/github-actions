@@ -4,6 +4,7 @@ set -euo pipefail
 
 source ./functions.sh
 
+git symbolic-ref HEAD
 echo "---CURRENT BRANCH NAME---"
 branch_name=$(git symbolic-ref HEAD 2>/dev/null | cut -d"/" -f 3)
 echo ${branch_name} 
