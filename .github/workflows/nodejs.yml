@@ -27,11 +27,7 @@ jobs:
         run: |
           chmod 755 app_version.sh tag_version.sh
           ./app_version.sh
-          pwd
-          cd ..
-          pwd
-          ls
-          ./github-actions/tag_version.sh
+          ./tag_version.sh
           ls -la
 # Build docker image
       - name: docker build Dockerfile
