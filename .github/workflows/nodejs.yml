@@ -29,6 +29,8 @@ jobs:
           ./app_version.sh
           pwd
           cd ..
+          pwd
+          ls
           ./github-actions/tag_version.sh
           ls -la
 # Build docker image
