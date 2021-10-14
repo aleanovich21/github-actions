@@ -24,8 +24,8 @@ jobs:
 # Getting variables from pipline_conf
       - name: Get secrets
         run: |
-          ./pars.sh
           cat ./pipeline_conf
+          ./pars.sh
           cat ./secrets/repository_name.txt
           cat ./secrets/repository_push_name.txt
 # Creating hash and branch version name if we did push to main branch
