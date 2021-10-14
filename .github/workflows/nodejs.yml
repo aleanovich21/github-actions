@@ -24,7 +24,7 @@ jobs:
 # Getting variables from pipline_conf
       - name: Get secrets
         run: |
-          cat ./secrets/pipeline_conf
+          cat ./scripts/pipeline_conf
           ./scripts/pars.sh
           cat ./secrets/repository_name.txt
           cat ./secrets/repository_push_name.txt
