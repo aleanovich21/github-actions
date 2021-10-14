@@ -25,7 +25,8 @@ jobs:
       - name: Get secrets
         run: |
           ./pars.sh
-          chmod 755 ./app_version.sh ./tag_version.sh
+          cat ./secrets/repository_name.txt
+          cat ./secrets/repository_push_name.txt
 # Creating hash and branch version name if we did push to main branch
       - name: Application version
         if: ${{ github.event_name == 'push' }}
