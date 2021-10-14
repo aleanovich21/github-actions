@@ -49,6 +49,9 @@ jobs:
       - name: docker push
         run: |
           echo "---PUSH IMAGE TO DOCKERHUB---"
+          ls -la
+          cd ./secrets/
+          ls -la
           ./scripts/push.sh
 # Pull and deploy image 
       - name: docker pull and deploy
