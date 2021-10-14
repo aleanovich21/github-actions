@@ -3,7 +3,7 @@ FROM node:12
 #Creating working directory
 WORKDIR /usr/src/app
 
-COPY package*.json ./
+COPY package*.json ./application/
 
 RUN npm install
 
