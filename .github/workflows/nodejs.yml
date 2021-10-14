@@ -24,17 +24,17 @@ jobs:
 # Getting variables from pipline_conf
       - name: Get secrets
         run: |
-          ./pars.sh
+          ./common/pars.sh
 # Creating hash and branch version name if we did push to main branch
       - name: Application version
         if: ${{ github.event_name == 'push' }}
         run: |
-          ./app_version.sh
+          ./common/app_version.sh
 # Creating tag version name if we created tag
       - name: Tag version
         if: ${{ github.event_name == 'create' }}
         run: |
-          ./tag_version.sh
+          ./common/tag_version.sh
 # Build docker image
       - name: docker build Dockerfile
         run: |
