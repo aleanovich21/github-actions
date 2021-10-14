@@ -2,6 +2,6 @@
 
 set -euo pipefail
 
-source ./functions.sh
+source ./common/functions.sh
 
 pars_file ./secrets/ ./pipeline_conf
