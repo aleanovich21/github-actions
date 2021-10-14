@@ -52,6 +52,7 @@ jobs:
           ls -la
           cd ./secrets/
           ls -la
+          cd ../
           ./scripts/push.sh
 # Pull and deploy image 
       - name: docker pull and deploy
